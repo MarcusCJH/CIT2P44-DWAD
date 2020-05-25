@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EIDShopMaster.Master.cs" Inherits="EIDShop.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ElD Shop</title>
+    <link href="style/css/transdmin.css" rel="stylesheet" type="text/css" media="screen" />
+    <!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="style/css/ie6.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="style/css/ie7.css" /><![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript" src="style/js/jquery.js"></script>
+    <script type="text/javascript" src="style/js/jNice.js"/></script>
+    <style type="text/css">
+        .auto-style1 {
+	text-align: center;
+    }
+</style>
+<script language="javascript">
+ function check() {
+        var a = window.confirm("Are you sure to delete ? ");
+        if (a) {
+            //window.location("ResidentManagement.aspx");
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>   
+</head>
+<body>
+    <form id="form2" runat="server">
+	<div id="wrapper">
+    	<p></p>
+    	<h1><a href="UserManagement.aspx"><span>ElD Shop</span></a></h1>
+    	<p></p>
+                
+        <div id="containerHolder">
+			<div id="container">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    <div id="sidebar">
+        <ul class="sideNav">
+            <li><a href="UserManagement.aspx">User Management</a></li>
+            <li><a href="ResidentManagement.aspx">Resident Management</a></li>
+            <li><a href="ShoppingManagement.aspx">Shopping Management</a></li>
+            <li><a href="Volunteerpage.aspx" class="active">Volunteer Management</a></li>
+            <li><asp:LinkButton ID="lbLogout" runat="server" onclick="lbLogout_Click1">Logout</asp:LinkButton></li>
+        </ul>
+    </div>
+    <h2>
+        <a href="#">Volunteer Management</a> &raquo;
+        <a href="Volunteerpage.aspx" class="active">Overview</a></h2>
+    <div id="main">
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="style1">
+                    <asp:DataList ID="dlvolunteer" runat="server" Width="665px">
+                    
+                        <ItemTemplate>
+                            Name:
+                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("resident_name") %>'></asp:Label>
+                            , ID:
+                            <asp:Label ID="Label2" runat="server" Text='<%# Eval("resident_no") %>'></asp:Label>
+                            <td class="action">
+                                <asp:HyperLink ID="HyperLink1" class="view" runat="server" 
+                                      NavigateUrl='<%# "ResidentView.aspx?resNo="+Eval("resident_no") %>'>View</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink2" class="edit" runat="server" 
+                                      NavigateUrl='<%# "ResidentUpdate.aspx?resNo="+Eval("resident_no") %>'>Edit</asp:HyperLink>
+                                <asp:LinkButton ID="LinkButton1" class="delete" runat="server" 
+                                    OnClientClick='javascript:return confirm("Are you sure to delete?")' 
+                                    Text="delete" CommandName="Del"></asp:LinkButton>
+                                <p>
+                        </ItemTemplate>
+                    </asp:DataList>
+                </td>
+            <tr>
+                <td class="action" style="width: 658px; text-align: right;">
+                    Click here to<a class="create" href="ResidentCreate.aspx">Create</a>&nbsp;&nbsp; a new Volunteer</td>
+            </tr>
+        </table>
+        <br>
+        <br/>
+    </div>
+    </asp:ContentPlaceHolder>
+          </div>
+       </div>
+       </div>
+    </form>               
+        <p id="footer" class="auto-style1">Copyright © 2012 Elderly and Disabled Shopping Service</p>
+</body>
+</html>

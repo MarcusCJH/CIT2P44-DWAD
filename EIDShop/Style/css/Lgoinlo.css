@@ -1,0 +1,26 @@
+﻿*{margin:0;padding:0;}
+html{width:100%;height:100%;overflow-x:hidden;}
+body{height:100%;font-size:10pt;background:#F1F1F1;color:#333;overflow:auto;overflow-x:hidden;margin:0;padding:0;}
+body#login{background:#D4D4D4;}
+body#page{height:auto;border-top:60px solid #0065AF;padding:20px;}
+a{color:#0D324F;}
+input{font-size:24px;background:#F4F4F4;border:1px solid #A5ACB2;height:30px;overflow:hidden;}
+input.bt{height:40px;border:3px double #CCC;border-right-color:#999;border-bottom-color:#999;background:url(http://www.richbox.net/blog/wp-admin/images/fade-butt.png) #EEE repeat-x left top;padding:4px;}
+input.checkbox{border:none;height:auto;}
+textarea,select{background:#F4F4F4;border:1px solid #A5ACB2;}
+table{border-collapse:collapse;margin:8px auto;}
+th,td{vertical-align:middle;border:1px dotted #DDD;border-collapse:collapse;padding:6px;}
+th{background:#DFDFDF;}
+td{background:#F1F1F1;}
+h1{position:absolute;width:100%;height:33px;overflow:hidden;color:#FFF;font-size:12pt;top:0;left:0;background:#0065AF;border-bottom:3px solid #FFF;padding:25px 0 0 20px;}
+h2{background:url(h2Bg.gif) repeat-x top left;font-size:12px;color:#333;padding:8px;}
+p{margin:10px auto;}
+#loginForm{width:400px;height:300px;position:absolute;top:50%;left:50%;background:#FFF;border:3px solid #999;margin:-150px 0 0 -200px;}
+#loginForm h3{background:#000;color:#FFF;margin:0 0 30px;padding:14px 0 8px 20px;}
+#loginForm label{display:block;padding:12px 40px;}
+#loginForm label span{display:block;position:absolute;padding:8px 0 0;}
+#loginForm label input{width:200px;margin:0 0 0 70px;}
+#loginForm label#submit{padding-left:110px;}
+#loginForm label input.bt{width:80px;margin:0;}
+#registerForm{width:800px;margin:0 auto;}
+#siteCopyRight{display:block;position:absolute;width:200px;top:50%;left:50%;text-align:center;color:#999;margin:160px 0 0 -100px;}
