@@ -63,7 +63,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\Delete Cascade Script.txt" />
+    <Content Include="DB\Delete Cascade Script.sql" />
     <Content Include="DB\EIDDB.sql" />
     <Content Include="Register.aspx" />
     <Content Include="ResidentUpdate.aspx" />
